@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 템플릿</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+    <script src="./js/data.js"></script>
+
+</head>
+<body>
+    <div class="load_page">
+        <p class="prg_txt">0%</p>
+        <div class="loader"></div>
+    </div>
+    <script src="./js/load.js"></script>
+    <div class="wrap">
+        <header class="header">
+            <div class="gnb" uk-sticky="start: 100%">
+                <nav class="uk-navbar-container uk-navbar-transparent">
+                    <div class="uk-container">
+                        <div uk-navbar>
+                            <div class="uk-navbar-left">
+                                <a class="logo_item uk-navbar-item uk-logo" href="#" aria-label="Back to Home">Logo</a>
+                                <ul class="uk-navbar-nav">
+                                    <li>
+                                        <a href="#gallery">
+                                            <span class="uk-margin-small-right"></span>
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#schedule">
+                                            <span class="uk-margin-small-right"></span>
+                                            Schedule
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact">
+                                            <span class="uk-margin-small-right"></span>
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uk-navbar-right">
+                                <ul class="uk-navbar-nav">
+                                    <li>
+                                        <label for="darkmode" class="blind">화면 모드 변경</label>
+                                        <div class="button-cover">
+                                            <div class="button r" id="themes_btn">
+                                            <input class="checkbox" type="checkbox" name="themes" id="darkmode" onchange="typeCheck('dark-theme')">
+                                            <div class="knobs">
+                                                <span></span>
+                                            </div>
+                                            <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section main_visual">
+                <div class="round">
+                </div>
+            </section>
+            <section class="section latest_art">
+                <div>
+                <h3 class="section_title">Latest Artwork</h3>
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper slideBox">
+                        <!-- Slides -->
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            </section>
+            <section class="section" id="gallery">
+                <div uk-filter="target: .js-filter">
+                    <h3 class="section_title">Gallery</h3>
+                    <ul class="categoryBox uk-subnav uk-subnav-pill">
+                    </ul>
+                    <div  uk-lightbox="animation: slide">
+                        <ul class="galleryBox js-filter" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
+                            <!-- <li data-tag="white">
+                                <a href="./images/slide1.jpg">
+                                    <img class="round" src="./images/slide1.jpg" alt="슬라이드1">
+                                </a>
+                                <div>
+                                    <dl class="tal pdt15 uk-description-list uk-description-list-divider">
+                                        <dt><strong class="pro-title">Title</strong></dt>
+                                        <dd class="em_block">
+                                            <span class="uk-label">장르</span>
+                                            <span class="fr edit_date">2023.05</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="schedule">
+                <div>
+                    <h3 class="section_title">Schedule</h3>
+                    <div>
+                        <h4><strong class="scheduleYear"></strong> 일정</h4>
+                        <div class="scheduleBox01 uk-column-1-2@s uk-column-1-6@m uk-column-1-7@l uk-column-divider">
+                            <!-- <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>1월</dt>
+                                    <dd><span class="uk-label schedule_check">모집중</span></dd>
+                                </dl>
+                            </div>
+                            <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>2월</dt>
+                                    <dd><span class="uk-label schedule_check">마감</span></dd>
+                                </dl>
+                            </div>
+                            <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>3월</dt>
+                                    <dd><span class="uk-label schedule_check">마감</span></dd>
+                                </dl>
+                            </div>
+                            <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>4월</dt>
+                                    <dd><span class="uk-label schedule_check">마감</span></dd>
+                                </dl>
+                            </div>
+                            <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>5월</dt>
+                                    <dd><span class="uk-label schedule_check">마감</span></dd>
+                                </dl>
+                            </div>
+                            <div>
+                                <dl class="uk-description-list uk-description-list-divider">
+                                    <dt>6월</dt>
+                                    <dd><span class="uk-label schedule_check">마감</span></dd>
+                                </dl>
+                            </div> -->
+                        </div>
+                        <hr>
+                        <div class="scheduleBox02 uk-column-1-2@s uk-column-1-6@m uk-column-1-7@l uk-column-divider">
+                        </div>
+                        <p class="txt_box round scheduleDesc"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="section"  id="contact">
+                <div>
+                    <h3 class="section_title">Contact</h3>
+                    <dl class="uk-description-list uk-description-list-divider">
+                        <dt>문의 메일</dt>
+                        <dd>
+                            <p>1234@example.com</p>
+                        </dd>
+                    </dl>
+                    <p class="txt_box round">장르, 희망 단가, 마감일을 포함하여 문의 주시면 빠른 답변이 가능합니다.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div>
+                <p>You can Find me on:</p>
+                <ul class="uk-iconnav">
+                    <li><a href="#" uk-icon="icon: twitter"></a></li>
+                    <li><a href="#" uk-icon="icon: instagram"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var html = document.querySelector('html');
+
+        function typeCheck(type){
+
+            if(html.classList.length > 0){html.classList.remove(type);
+                }else if(html.classList.length === 0){html.classList.add(type);
+            };
+        }
+    //메인 배너 부분 데이터 박아너기
+        let bannerList = [];
+            bannerList.push(`
+            <div class="uk-section uk-light uk-background-cover" style="background-image:url(${banner.bannerImg}); padding:0;">
+                <div class="uk-container" style="padding:70px 40px; backdrop-filter: blur(5px) var(--c-filter)">
+                    <h2 class="banner_title">${banner.bannerTitle}</h2>
+                    <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
+                        <div>
+                            <p>${banner.bannerDesc}</p>
+                            <a class="uk-button uk-width-1-2@m round" href="${banner.bannerLink}">${banner.bannerLinkTxt}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `)
+        document.querySelector('.section.main_visual > div').innerHTML = bannerList.join('');
+
+    //슬라이드 부분 데이터 박아넣기
+        let slideList = [];
+        portfolio.slice(0,8).forEach((content,idx) => {
+            slideList.push(`
+            <div class="swiper-slide product_img round">
+                <img src="${content.img}" alt="${content.alt}">
+            </div>
+            `)
+        document.querySelector('.slideBox').innerHTML = slideList.join('');
+        });
+
+    //카테고리 편집
+        let categoryList = [`<li class="uk-active round" uk-filter-control><a href="#">All</a></li>`];
+        category.forEach((content,idx) => {
+            categoryList.push(`
+            <li class="round" uk-filter-control="[data-tag='${content.type}']"><a href="#">${content.name}</a></li>
+            `)
+        document.querySelector('.categoryBox').innerHTML = categoryList.join('');
+        });
+
+    //갤러리 부분 데이터 박아넣기
+        let portfolioList = [];
+        portfolio.forEach((content,idx) => {
+            portfolioList.push(`
+            <li data-tag="${content.tag}">
+                <a href="${content.img}">
+                    <img class="round" src="${content.img}" alt="${content.alt}">
+                </a>
+                <div>
+                    <dl class="tal pdt15 uk-description-list uk-description-list-divider">
+                        <dt><strong class="pro-title">${content.title}</strong></dt>
+                        <dd class="em_block">
+                            <span class="uk-label">${content.tagname}</span>
+                            <span class="fr edit_date">${content.date}</span>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            `)
+        document.querySelector('.galleryBox').innerHTML = portfolioList.join('');
+        });
+
+    //스케쥴 부분 데이터 박아넣기
+        document.querySelector('.scheduleYear').innerHTML = schedule.year;
+        document.querySelector('.scheduleDesc').innerHTML = schedule.desc;
+        let scheduleFirstBox = document.querySelector('.scheduleBox01');
+        let scheduleSecondBox = document.querySelector('.scheduleBox02');
+        let scheduleFirstList= [];
+        let scheduleSecondList= [];
+
+        schedule.firstHalf.forEach((schedule,idx) => {
+            scheduleFirstList.push(`
+            <div>
+                <dl class="uk-description-list uk-description-list-divider">
+                    <dt>${idx + 1}월</dt>
+                    <dd><span class="uk-label schedule_check">${schedule}</span></dd>
+                </dl>
+            </div>
+            `)
+            scheduleFirstBox.innerHTML = scheduleFirstList.join('');
+        });
+
+        schedule.secondHalf.forEach((schedule,idx) => {
+            scheduleSecondList.push(`
+            <div>
+                <dl class="uk-description-list uk-description-list-divider">
+                    <dt>${idx + 7}월</dt>
+                    <dd><span class="uk-label schedule_check">${schedule}</span></dd>
+                </dl>
+            </div>
+            `)
+            scheduleSecondBox.innerHTML = scheduleSecondList.join('');
+        });
+
+
+    //스케쥴 뱃지 스타일 주기
+        let schedule_badge = document.querySelectorAll('.schedule_check');
+        let badge_arr = [];
+        schedule_badge.forEach((badge_txt) => {
+            badge_arr.push(badge_txt.innerText);
+        });
+        //console.log(badge_arr);
+        badge_arr.forEach((currentElement, index, array) => {
+            switch (currentElement) {
+                case '마감':
+                        schedule_badge[index].style.background = '#aaa';
+                        schedule_badge[index].parentNode.parentNode.style.opacity = '0.5';
+                    break;
+                case '모집중':
+                        schedule_badge[index].style.background = 'linear-gradient(to right, #61b9f3, #a161f3)';
+                    break;
+            }
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 15,
+        autoplay: {
+        delay: 0, //add
+        disableOnInteraction: false,
+        },
+        speed: 5000,
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerView: 5,
+        breakpoints: {
+            "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            },
+            "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            },
+            "@1.00": {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            },
+            "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            },
+        }
+        });
+    </script>
+</body>
+</html>
