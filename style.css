@@ -47,6 +47,14 @@ html,body{
     background: #fff;
     z-index: 999;
 }
+.pageProgressBar{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--c-bg-body);
+}
 .load_page::after{
     content: "";
     display: block;
@@ -55,6 +63,16 @@ html,body{
     width: 100%;
     height: 10px;
     background: linear-gradient(to right, #61b9f3, #a161f3);
+}
+.gnb::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom:0; left: 0;
+    width:100%;
+    height: 2px;
+    background: linear-gradient(to right, #61b9f3, #a161f3);
+    z-index: -1;
 }
 
 .prg_txt{
@@ -308,14 +326,16 @@ z-index: 1;
 
 #themes_btn .knobs:before {
   content: "☀";
-  left: 2px;
+  left: 3px;
   filter: grayscale(1);
+  font-size: 13px;
 }
 
 #themes_btn .knobs:after {
   content: "🌙";
   right: -24px;
   filter: grayscale(1);
+  font-size: 13px;
 }
 
 #themes_btn .knobs:before,
@@ -335,7 +355,7 @@ z-index: 1;
 }
 
 #themes_btn .checkbox:checked + .knobs:after {
-  right: 6px;
+  right: 5px;
 }
 
 #themes_btn .checkbox:checked + .knobs span {
