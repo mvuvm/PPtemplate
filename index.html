@@ -175,25 +175,55 @@
                 </div>
             </section>
             <section class="section"  id="contact">
-                <div>
-                    <h3 class="section_title">Contact</h3>
-                    <dl class="uk-description-list uk-description-list-divider">
-                        <dt>문의 메일</dt>
-                        <dd>
-                            <p>1234@example.com</p>
-                        </dd>
-                    </dl>
-                    <p class="txt_box round">장르, 희망 단가, 마감일을 포함하여 문의 주시면 빠른 답변이 가능합니다.</p>
+                <h3 class="section_title">Contact</h3>
+                <div class="flex-box">
+                    <div class="profile_box">
+                        <div class="uk-card-header">
+                        </div>
+                        <div class="uk-card-body">
+                        </div>
+                    </div>
+                    <hr class="uk-divider-small">
+                    <div>
+                        <dl>
+                            <dt class="uk-card-title fw400">작업 의뢰</dt>
+                            <dd>
+                                <p class="email_txt"></p>
+                                <p class="txt_box round email_desc mt0"></p>
+                                <form class="form_box">
+                                    <fieldset class="uk-fieldset">
+                                        <div class="uk-margin">
+                                            <label for="name" >이름</label>
+                                            <input id="name" class="uk-input" type="text" placeholder="이름" aria-label="Input" required="required">
+                                        </div>
+                                        <div class="uk-margin">
+                                            <label for="email">보내는 분 이메일</label>
+                                            <input id="name" class="uk-input" type="text" placeholder="보내는 분 이메일" aria-label="Input" required="required">
+                                        </div>
+                                        <div class="uk-margin">
+                                            <label for="mail_con">내용</label>
+                                            <textarea id="mail_con" class="uk-textarea" required="required"></textarea>
+                                        </div>
+                                    </fieldset>
+                                    <button type="submit" class="uk-button round fr">보내기</button>
+                                </form>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
             <div>
-                <p>누구보다 빨리 저의 그림과 만나기:</p>
-                <ul class="uk-iconnav">
-                    <li><a href="#" uk-icon="icon: twitter"></a></li>
-                    <li><a href="#" uk-icon="icon: instagram"></a></li>
-                </ul>
+                <div>
+                    <span class="copyright"></span>
+                </div>
+                <div>
+                    <ul class="uk-iconnav">
+                        <li><a href="#" uk-icon="icon: twitter"></a></li>
+                        <li><a href="#" uk-icon="icon: instagram"></a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>
@@ -207,11 +237,22 @@
                 }else if(html.classList.length === 0){html.classList.add(type);
             };
         }
+
+    // 스크롤 프로그래스바
+    window.addEventListener('scroll', () => {
+            let currentY = document.documentElement.scrollTop //스크롤한 높이
+            let totalY =
+                document.documentElement.scrollHeight
+                - document.documentElement.clientHeight // 전체높이
+            let percentage = (currentY / totalY) * 100 //퍼센트값
+            document.querySelector('.pageProgressBar').style.width = `calc( 100% - ${percentage}% )` //프로그래스 바 너비번경
+        });
+
     //메인 배너 부분 데이터 박아너기
         let bannerList = [];
             bannerList.push(`
             <div class="uk-section uk-light uk-background-cover" style="background-image:url(${banner.bannerImg}); padding:0;">
-                <div class="uk-container" style="padding:70px 40px; backdrop-filter: blur(5px) var(--c-filter)">
+                <div class="uk-container banner">
                     <h2 class="banner_title">${banner.bannerTitle}</h2>
                     <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
                         <div>
@@ -298,7 +339,6 @@
             scheduleSecondBox.innerHTML = scheduleSecondList.join('');
         });
 
-
     //스케쥴 뱃지 스타일 주기
         let schedule_badge = document.querySelectorAll('.schedule_check');
         let badge_arr = [];
@@ -318,15 +358,33 @@
             }
         });
 
-        // 스크롤 프로그래스바
-        window.addEventListener('scroll', () => {
-            let currentY = document.documentElement.scrollTop //스크롤한 높이
-            let totalY =
-                document.documentElement.scrollHeight
-                - document.documentElement.clientHeight // 전체높이
-            let percentage = (currentY / totalY) * 100 //퍼센트값
-            document.querySelector('.pageProgressBar').style.width = `calc( 100% - ${percentage}% )` //프로그래스 바 너비번경
+    //작가 프로필, form
+        document.querySelector('.email_txt').innerHTML = profile.email;
+        document.querySelector('.email_desc').innerHTML = profile.emaildesc;
+        let profileHeaderBox = document.querySelector('.profile_box .uk-card-header');
+        let profileBodyBox = document.querySelector('.profile_box .uk-card-body');
+        let profileHeaderBoxList= [];
+        let profileBodyBoxList= [];
+        profileHeaderBoxList.push(`
+            <div class="profile_img">
+                <img src="${profile.image}" alt="Avatar">
+            </div>
+            <div class="profile_con uk-width-expand">
+                <stong class="uk-card-title uk-margin-remove-bottom em_block">${profile.name}</stong>
+                <span class="uk-text-meta uk-margin-remove-top">${profile.subdesc}</span>
+            </div>
+            `)
+        profileHeaderBox.innerHTML = profileHeaderBoxList.join('');
+
+        profile.carrer.forEach((profile,idx) => {
+        profileBodyBoxList.push(`
+            <p><span class="uk-text-meta">${profile.date}</span> - ${profile.title}</p>
+            `)
+            profileBodyBox.innerHTML = profileBodyBoxList.join('');
         });
+
+    //푸터 카피라이트
+        document.querySelector('.copyright').innerHTML = `Copyright (C) ${schedule.year} (${profile.name}) all rights reserved.`;
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

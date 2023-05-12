@@ -201,3 +201,36 @@ const schedule = {
     desc: '2024년도 예약문의는 받지 않습니다. <br> 특수 슬롯(긴급건 등) 문의는 따로 부탁드립니다.'
 }
 
+const profile = {
+    name: '작가명', //작가명
+    subdesc: '프리랜서 일러스트레이터', //상태 텍스트
+    image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAzMTRfMjMw/MDAxNjc4ODAyMDkwMjA3.0qs53UirJD9sberd8ykxMNmhetHLOzebQXNdYSb-BvIg.pC6GsjdCZtA6ef77gLM2PGRbhb3ky1egfqyxqP2P_Lsg.PNG.mvuvm/%EC%95%8C%ED%8B%B0-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B7%B8%EB%A6%BC2-4.png?type=w800', // 프로필 이미지
+    email: 'test@example.com',
+    emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주시면 빠른 답변이 가능합니다.<br>아래의 폼을 이용하실 경우 보내시는 분의 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
+    carrer: [
+        {
+            title: '경력사항1',
+            date: '23.05.12',
+        },
+        {
+            title: '경력사항2',
+            date: '23.05.12',
+        },
+        {
+            title: '무료연재 표지작업',
+            date: '23.04.11',
+        },
+        {
+            title: '포토샵 오토액션 판매',
+            date: '22.08.01',
+        },
+        {
+            title: '폼림픽 커미셔너의 꿈을 꾸다',
+            date: '22.07.27',
+        },
+        {
+            title: '콜리로 처음 커미션을 받다',
+            date: '22.06.10',
+        }
+    ]
+}

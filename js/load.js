@@ -17,5 +17,5 @@ var progressCounter = setInterval(function () {
 window.onload = function(){
     document.querySelector('.load_page').style.transform = 'translateY(-100%)';
     document.querySelector('.load_page').style.opacity = '0';
-    console.log('도큐먼트 레디 완료!');
+    //console.log('도큐먼트 레디 완료!');
  };
