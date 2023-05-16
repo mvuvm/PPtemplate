@@ -27,6 +27,14 @@ const category = [
 ]
 const portfolio = [
         {
+            title: '흡연단속',
+            tag: 'personal',
+            tagname: '개인작',
+            date: '23.05.15',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA1MTVfODIg/MDAxNjg0MTQ5MjUyMDUz.wVtiocz8ER0N4flM2NXdBhpS13YqpU9oF56DSBTmGTYg.apmhwYQ-47km20ySIcpqxhxdItfO1VaM0SL07j0rPS4g.PNG.mvuvm/%EC%B9%BC%EB%93%A4%EA%B3%A0-%EC%84%9C%EC%9E%88%EB%8A%94-%ED%8F%AC%EB%8B%88%ED%85%8C%EC%9D%BC%EB%82%A8-%EC%97%85%EB%A1%9C%EB%93%9C%EC%9A%A9.png?type=w800',
+            alt: '작업물'
+        },
+        {
             title: '저녁 호수와 장발 남캐',
             tag: 'personal',
             tagname: '개인작',
