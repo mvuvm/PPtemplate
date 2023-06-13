@@ -27,6 +27,14 @@ const category = [
 ]
 const portfolio = [
         {
+            title: '흑발 적안',
+            tag: 'personal',
+            tagname: '개인작',
+            date: '23.06.08',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800',
+            alt: '작업물'
+        },
+        {
             title: '흡연단속',
             tag: 'personal',
             tagname: '개인작',
