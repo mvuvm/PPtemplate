@@ -500,6 +500,7 @@ z-index: 1;
 }
 
 .wrap .uk-input,
+.wrap .uk-select,
 .wrap .uk-textarea{
     background:var(--c-point-color);
     border: none;
