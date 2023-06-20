@@ -1,6 +1,6 @@
 const banner = {
     logoName: 'SILSILVONGVONG',
-    bannerImg: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAxMDVfMTA2/MDAxNjcyOTA0NjIzODQ3.aCECBi4mRqPOGaOflDYT2ateZajIL3NT-Q63w1zZKWsg.N8NKmxA6TxUtwI1vXMHMOrHyjbGEIrBdG_W9gILv7Tog.PNG.mvuvm/%EB%93%9C%EB%9E%98%EA%B3%A4-%EC%9E%90%EC%BA%90.png?type=w800',
+    bannerImg: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfMTk5/MDAxNjg3MDcwODgyNjIw.3f7ldpNfW99GKVmlgjhoNtPc9iVkwLLAiltTIvdYF-Qg.r7O8C-zPzKJ4wh3TjBNQb8nD67HmswzgAENP_11femog.PNG.mvuvm/%ED%98%84%EC%9E%90%EC%9D%98-%EA%BD%83-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png?type=w800',
     bannerTitle: '포트폴리오 사이트 OPEN',
     bannerDesc: '포트폴리오 사이트를 새롭게 정비하였습니다.<br>2023년 일정은 아래 스케쥴란을 확인해주세요.',
     bannerLinkTxt: '2023일정보기',
@@ -27,7 +27,23 @@ const category = [
 ]
 const portfolio = [
         {
-            title: '흑발 적안',
+            title: '로맨스 판타지',
+            tag: 'commision',
+            tagname: '커미션',
+            date: '23.06.18',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfNDkg/MDAxNjg3MDcwOTAwOTI3.5-Rv6dlIm2gAVd7_O5rUNCSjWFId5X_0tlTVJfQw6iUg.pl2ObUmNMobso5Nb3hy9vK7QbxafrYtLQZK6v9BAOzcg.PNG.mvuvm/%EB%AF%B8%EC%A7%80%EB%8B%98-%EB%A1%9C%ED%8C%902%EC%9D%B8-%EC%BB%A4%EB%AF%B8%EC%85%98.png?type=w800',
+            alt: '작업물'
+        },
+        {
+            title: '현자의 꽃',
+            tag: 'romencefantasy',
+            tagname: '로맨스 판타지',
+            date: '23.06.18',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfMTk5/MDAxNjg3MDcwODgyNjIw.3f7ldpNfW99GKVmlgjhoNtPc9iVkwLLAiltTIvdYF-Qg.r7O8C-zPzKJ4wh3TjBNQb8nD67HmswzgAENP_11femog.PNG.mvuvm/%ED%98%84%EC%9E%90%EC%9D%98-%EA%BD%83-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png?type=w800',
+            alt: '작업물'
+        },
+        {
+            title: '흑적',
             tag: 'personal',
             tagname: '개인작',
             date: '23.06.08',
@@ -220,7 +236,7 @@ const schedule = {
 const profile = {
     name: '작가명', //작가명
     subdesc: '프리랜서 일러스트레이터', //상태 텍스트
-    image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAzMTRfMjMw/MDAxNjc4ODAyMDkwMjA3.0qs53UirJD9sberd8ykxMNmhetHLOzebQXNdYSb-BvIg.pC6GsjdCZtA6ef77gLM2PGRbhb3ky1egfqyxqP2P_Lsg.PNG.mvuvm/%EC%95%8C%ED%8B%B0-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B7%B8%EB%A6%BC2-4.png?type=w800', // 프로필 이미지
+    image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주시면 빠른 답변이 가능합니다.<br>아래의 폼을 이용하실 경우 보내시는 분의 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
     carrer: [
