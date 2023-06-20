@@ -193,8 +193,13 @@
                                 <form class="form_box">
                                     <fieldset class="uk-fieldset">
                                         <div class="uk-margin">
-                                            <label for="name" >이름</label>
-                                            <input id="name" class="uk-input" type="text" placeholder="이름" aria-label="Input" required="required">
+                                            <label for="name" >문의 카테고리</label>
+                                            <select id="contact_category" class="uk-select">
+                                                <option>표지 슬롯 예약문의</option>
+                                                <option>표지 외주문의</option>
+                                                <option>방송용 일러스트 외주 문의</option>
+                                                <option>기타 외주 문의</option>
+                                            </select>
                                         </div>
                                         <div class="uk-margin">
                                             <label for="email">보내는 분 이메일</label>
@@ -212,7 +217,7 @@
                                         </div>
                                         <div class="uk-margin" style="display: flex; gap: 10px;">
                                             <div>
-                                                <label for="deadline">희망 마감 기간</label>
+                                                <label for="deadline">희망 마감일</label>
                                                 <input id="deadline" class="uk-input" type="date" placeholder="발주처" aria-label="Input" required="required">
                                             </div>
                                             <div>
