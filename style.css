@@ -481,7 +481,8 @@ z-index: 1;
 }
 
 .wrap .uk-textarea{
-    resize: none;
+    height: auto;
+    resize:vertical;
 }
 
 .wrap .uk-button{
