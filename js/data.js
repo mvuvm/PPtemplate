@@ -230,28 +230,16 @@ const schedule = {
                     '모집중', //11월
                     '모집중' //12월
                 ],
-    desc: '2024년도 예약문의는 받지 않습니다. <br> 특수 슬롯(긴급건 등) 문의는 따로 부탁드립니다.'
+    desc: '2024년도 예약문의는 받지 않습니다.<br>특수 슬롯(긴급건 등) 문의는 따로 부탁드립니다.<br>비상업용 개인 의뢰는 커미션으로 진행하고 있습니다. 커미션 오픈 여부는 커미션 페이지에서 확인하실 수 있습니다.'
 }
 
 const profile = {
     name: '작가명', //작가명
-    subdesc: '프리랜서 일러스트레이터', //상태 텍스트
+    subdesc: '프리랜서 일러스트레이터<br>커미션: https://kre.pe/m8kD', //상태 텍스트
     image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
-    emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주시면 빠른 답변이 가능합니다.<br>아래의 폼을 이용하실 경우 보내시는 분의 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
+    emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
     carrer: [
-        {
-            title: '경력사항1',
-            date: '23.05.12',
-        },
-        {
-            title: '경력사항2',
-            date: '23.05.12',
-        },
-        {
-            title: '무료연재 표지작업',
-            date: '23.04.11',
-        },
         {
             title: '포토샵 오토액션 판매',
             date: '22.08.01',
