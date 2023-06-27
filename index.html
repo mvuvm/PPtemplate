@@ -18,6 +18,7 @@
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./js/data.js"></script>
 
 </head>
@@ -229,7 +230,10 @@
                                     </fieldset>
                                     <button class="uk-button round fr">보내기</button>
                                     <div class="thankyou_message" style="display:none;">
-                                        <p class="txt_box round email_desc mt0">메일이 전송 되었습니다.<br>확인 후 바로 답신 드리겠습니다.<br>감사합니다.</p>
+                                        <p class="txt_box round email_desc mt0">
+                                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_3GBGBXE9Bv.json"  background="transparent"  speed="1"  style="width: 40px; height: 50px; margin: 0 auto;"  loop autoplay></lottie-player>
+                                            메일이 전송 되었습니다.<br>확인 후 바로 답신 드리겠습니다.<br>감사합니다.<br>&nbsp;
+                                        </p>
                                     </div>
                                 </form>
                             </dd>
@@ -412,6 +416,10 @@
     //푸터 카피라이트
         document.querySelector('.copyright').innerHTML = `Copyright (C) ${schedule.year} (${profile.name}) all rights reserved.`;
 
+    //메일 전송 alert 닫기
+        document.querySelector('.thankyou_message').addEventListener('click', function(){
+            document.querySelector('.thankyou_message').style.display = 'none';
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
