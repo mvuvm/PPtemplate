@@ -28,8 +28,8 @@ const category = [
 const portfolio = [
         {
             title: '로맨스 판타지',
-            tag: 'commision',
-            tagname: '커미션',
+            tag: 'romencefantasy',
+            tagname: '로맨스 판타지',
             date: '23.06.18',
             img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfNDkg/MDAxNjg3MDcwOTAwOTI3.5-Rv6dlIm2gAVd7_O5rUNCSjWFId5X_0tlTVJfQw6iUg.pl2ObUmNMobso5Nb3hy9vK7QbxafrYtLQZK6v9BAOzcg.PNG.mvuvm/%EB%AF%B8%EC%A7%80%EB%8B%98-%EB%A1%9C%ED%8C%902%EC%9D%B8-%EC%BB%A4%EB%AF%B8%EC%85%98.png?type=w800',
             alt: '작업물'
@@ -131,7 +131,7 @@ const portfolio = [
             alt: '작업물'
         },
         {
-            title: '리퀘스트 신청자분 자캐',
+            title: '무제',
             tag: 'personal',
             tagname: '개인작',
             date: '23.03.09',
@@ -140,8 +140,8 @@ const portfolio = [
         },
         {
             title: '자필소설속에 떨어지 내가 피폐물 남주의 애완동물이라고?',
-            tag: 'personal',
-            tagname: '개인작',
+            tag: 'romencefantasy',
+            tagname: '로맨스 판타지',
             date: '23.01.18',
             img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAxMThfMTE4/MDAxNjc0MDMxMzUwNzY2.viJ2OcPyAML05OsVEtAxQumPmj4qw6r3uPU5RNjEETQg.n-S4b__zhUiW7ccMIjTSGJH7y9emRg1Bu_WN0fSdaE0g.PNG.mvuvm/%ED%95%A9%EC%9E%91-%EC%B0%B8%EC%97%AC%ED%95%9C%EB%8B%A4%EB%A9%B4-%ED%9B%84%EB%B3%B4%EC%A0%95.png?type=w800',
             alt: '작업물'
@@ -179,14 +179,6 @@ const portfolio = [
             alt: '작업물'
         },
         {
-            title: '아이돌 마스터 신데렐라 걸즈 와쿠이 루미',
-            tag: 'fanart',
-            tagname: '팬아트',
-            date: '23.01.01',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAxMDFfMjAg/MDAxNjcyNTYzMDkwMzU4.sD_ZrrIsPmarwkLMB5WExubdvyiy3E5TZ0O4HDcAchAg.LV_Qaoy9qBFxLcQ2NLlp3jG6tA_YLRXwuXNRWrGD46Yg.PNG.mvuvm/2022-%EB%89%B4%EB%A3%A9-%EB%A3%A8%EB%AF%B8-%ED%9B%84%EB%B3%B4%EC%A0%952.png?type=w800',
-            alt: '작업물'
-        },
-        {
             title: '무기미도 미스터 폭스',
             tag: 'fanart',
             tagname: '팬아트',
@@ -200,14 +192,6 @@ const portfolio = [
             tagname: '개인작',
             date: '22.12.08',
             img: 'https://mblogthumb-phinf.pstatic.net/MjAyMjEyMDhfMTA1/MDAxNjcwNDc5OTEzOTE5.QVxyc0iRr-0dMzaqD--XMVS5J3LhS2HG4m4QMmCJ3gIg.DQ9AfYE1kfJo5ADje2zdltafbfcrTllS9ynI2r3hWW4g.PNG.mvuvm/%EC%82%AC%EC%A0%9C%EB%8B%98(%EB%AC%BC%EB%A6%AC)4-2.png?type=w800',
-            alt: '작업물'
-        },
-        {
-            title: '프로메어 리오',
-            tag: 'fanart',
-            tagname: '팬아트',
-            date: '22.11.14',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMjExMTRfMjM3/MDAxNjY4NDEzMTM2MzEy.ITMx0KbxfAzX4PN1M1AQukeftMkOODQPfPsihXdRcXQg.tYirP0gsIBC8kYcz3qpxvHPcZQKlyXesX9atm3CcfH0g.PNG.mvuvm/%ED%94%84%EB%A1%9C%EB%A9%94%EC%96%B4-%EB%A6%AC%EC%98%A42.png?type=w420',
             alt: '작업물'
         }
     ];
@@ -223,7 +207,7 @@ const schedule = {
                     '마감' //6월
                 ],
     secondHalf : [
-                    '모집중', //7월
+                    '마감', //7월
                     '모집중', //8월
                     '모집중', //9월
                     '모집중', //10월
@@ -235,22 +219,22 @@ const schedule = {
 
 const profile = {
     name: '작가명', //작가명
-    subdesc: '프리랜서 일러스트레이터<br>커미션: https://kre.pe/m8kD', //상태 텍스트
+    subdesc: '프리랜서 일러스트레이터', //상태 텍스트
     image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
     carrer: [
         {
-            title: '포토샵 오토액션 판매',
-            date: '22.08.01',
+            title: '<a href="https://twitter.com/dayong_ac" target="_blank">https://twitter.com/dayong_ac</a>',
+            date: '트위터',
         },
         {
-            title: '폼림픽 커미셔너의 꿈을 꾸다',
-            date: '22.07.27',
+            title: '<a href="#" target="_blank">블로그</a>',
+            date: '블로그',
         },
         {
-            title: '콜리로 처음 커미션을 받다',
-            date: '22.06.10',
+            title: '<a href="https://artmug.kr/index.php?channel=view&uid=28477" target="_blank">https://artmug.kr/</a>',
+            date: '커미션',
         }
     ]
 }
