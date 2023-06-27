@@ -228,7 +228,8 @@
                                             <textarea id="mail_con" name="mail_con" class="uk-textarea" required="required"></textarea>
                                         </div>
                                     </fieldset>
-                                    <button class="uk-button round fr">보내기</button>
+                                    <div class="mail_loading"><lottie-player src="https://assets9.lottiefiles.com/packages/lf20_x62chJ.json"  background="transparent"  speed="1"  style="width:auto; height: 120px;"  loop  autoplay></lottie-player></div>
+                                    <button class="uk-button round fr mail_btn">보내기</button>
                                     <div class="thankyou_message" style="display:none;">
                                         <p class="txt_box round email_desc mt0">
                                             <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_3GBGBXE9Bv.json"  background="transparent"  speed="1"  style="width: 40px; height: 50px; margin: 0 auto;"  loop autoplay></lottie-player>
@@ -415,6 +416,32 @@
 
     //푸터 카피라이트
         document.querySelector('.copyright').innerHTML = `Copyright (C) ${schedule.year} (${profile.name}) all rights reserved.`;
+
+    //메일 전송전 로딩
+    const mailSend = document.querySelector('.thankyou_message');
+	const options = {
+			root: null, // 뷰포트를 기준으로 타켓의 가시성 검사
+			rootMargin: '0px 0px 0px 0px', // 확장 또는 축소
+			threshold: 0, // 타켓의 가시성 0%일 때 옵저버 실행
+		};
+		const mailLoad = (entries, observer) => {
+
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+                    document.querySelector('.mail_loading').style.display = 'none'
+                    document.querySelector('.mail_btn').style.display = 'block'
+                    observer.unobserve(mailSend);
+				} else {
+                    document.querySelector('.mail_btn').addEventListener('click',function(){
+                        document.querySelector('.mail_loading').style.display = 'block'
+                        document.querySelector('.mail_btn').style.display = 'none'
+                    });
+				}
+			});
+
+		};
+    const observer = new IntersectionObserver(mailLoad, options); //관찰자 초기화
+	observer.observe(mailSend);
 
     //메일 전송 alert 닫기
         document.querySelector('.thankyou_message').addEventListener('click', function(){
