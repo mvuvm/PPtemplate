@@ -64,7 +64,7 @@ html,body{
     top:0; left: 0;
     width: 100%;
     height: 10px;
-    background: linear-gradient(to right, #61b9f3, #a161f3);
+    background: var(--c-point02-color);
 }
 .gnb::after{
     content: "";
@@ -73,7 +73,7 @@ html,body{
     bottom:0; left: 0;
     width:100%;
     height: 2px;
-    background: linear-gradient(to right, #61b9f3, #a161f3);
+    background: var(--c-point02-color);
     z-index: -1;
 }
 
@@ -287,6 +287,10 @@ form .uk-button:hover{
 
 .form_box label{
     font-size: 0.9em;
+}
+
+.mail_loading{
+    display: none;
 }
 
 .thankyou_message{
