@@ -240,12 +240,14 @@ form .uk-button:hover{
     /* column-count: 3;
     column-gap: 1.5em; */
     padding-left: 0;
+    will-change: opacity;
 }
 .galleryBox li{
     width: calc(100%/ 3);
     overflow: hidden;
     padding:10px 1vw 0;
     box-sizing: border-box;
+    will-change: left, top;
 }
 .galleryBox li img{
     width: 100%;
