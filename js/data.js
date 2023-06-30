@@ -147,22 +147,6 @@ const portfolio = [
             alt: '작업물'
         },
         {
-            title: '로드 오브 히어로즈 라샤드',
-            tag: 'fanart',
-            tagname: '팬아트',
-            date: '23.01.21',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAxMjFfMTQ0/MDAxNjc0Mjg1ODExNzkw.HmxZv6fZU7SoXiUJ7Ud3SOTq06wKq3CvBYZ86sIypd4g.bZKIjWJhKN2NK2_4CyzUWDcHQioKHClM1LCSlDmmqQIg.PNG.mvuvm/%EB%B9%9B%EB%9D%BC%EC%83%A4%EB%93%9C2.png?type=w800',
-            alt: '작업물'
-        },
-        {
-            title: '포켓몬스터 N',
-            tag: 'fanart',
-            tagname: '팬아트',
-            date: '23.01.18',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzAxMThfMTg2/MDAxNjc0MDMxNTk3MjQ1.x0hs9m9FhJwcs9crFQ-o2Akid3TOsVKZXaBDAZz9Cxsg.Ng-Us4_kFDTS7NQk0bEKSGFw-UrDb931-asaCiU7v3Qg.PNG.mvuvm/%EC%97%94-%ED%9B%84%EB%B3%B4%EC%A0%953.png?type=w800',
-            alt: '작업물'
-        },
-        {
             title: '데저트 드래곤',
             tag: 'personal',
             tagname: '개인작',
