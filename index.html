@@ -436,11 +436,29 @@
 				if (entry.isIntersecting) {
                     document.querySelector('.mail_loading').style.display = 'none'
                     document.querySelector('.mail_btn').style.display = 'block'
-                    observer.unobserve(mailSend);
-				} else {
+				} else{
                     document.querySelector('.mail_btn').addEventListener('click',function(){
-                        document.querySelector('.mail_loading').style.display = 'block'
-                        document.querySelector('.mail_btn').style.display = 'none'
+                        let mailCheck = 0;
+
+                        const email = document.querySelector('#email').value;
+                        const company = document.querySelector('#company').value;
+                        const productname = document.querySelector('#productname').value;
+                        const deadline = document.querySelector('#deadline').value;
+                        const pay = document.querySelector('#pay').value;
+                        const mail_con = document.querySelector('#mail_con').value;
+                        if(email == '' || company == '' || productname == '' || deadline == '' || pay == '' || mail_con == ''){
+                            mailCheck = 0;
+                        }else{
+                            mailCheck = 1;
+                        }
+
+                        //console.log(mailCheck);
+
+                        if(mailCheck == 1){
+                            document.querySelector('.mail_loading').style.display = 'block'
+                            document.querySelector('.mail_btn').style.display = 'none'
+                        }
+
                     });
 				}
 			});
