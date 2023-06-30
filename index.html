@@ -107,8 +107,8 @@
                     <h3 class="section_title">Gallery</h3>
                     <ul class="categoryBox uk-subnav uk-subnav-pill">
                     </ul>
-                    <div  uk-lightbox="animation: slide">
-                        <ul class="galleryBox js-filter" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
+                    <div  uk-lightbox="animation: slide" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
+                        <ul class="grid galleryBox js-filter"> <!-- 재정렬 문제로 애니메이션 효과 제거 uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200" -->
                             <!-- <li data-tag="white">
                                 <a href="./images/slide1.jpg">
                                     <img class="round" src="./images/slide1.jpg" alt="슬라이드1">
@@ -326,7 +326,7 @@
         let portfolioList = [];
         portfolio.forEach((content,idx) => {
             portfolioList.push(`
-            <li data-tag="${content.tag}">
+            <li class="grid-item" data-tag="${content.tag}">
                 <a href="${content.img}">
                     <img class="round" src="${content.img}" alt="${content.alt}">
                 </a>
@@ -520,7 +520,27 @@
             }
         });
     </script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+    var elem = document.querySelector('.grid');
+        var msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 20
+        });
 
+    const categoryBtn = document.querySelector('.categoryBox');
+        categoryBtn.addEventListener('click',function(event){
+            elem.style.opacity = '0';
+            setTimeout(()=>{
+                console.log('타임아웃 작동');
+                msnry.layout();
+                elem.style.opacity = '1';
+            },500);
+            return false;
+        })
+
+</script>
 <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
