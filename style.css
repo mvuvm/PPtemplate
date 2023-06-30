@@ -232,16 +232,20 @@ form .uk-button:hover{
     object-fit: cover;
     object-position:center;
 }
-
+.grid{
+    transition: all ease 1s;
+}
 .galleryBox{
-    column-count: 3;
-    column-gap: 1.5em;
+    display: block;
+    /* column-count: 3;
+    column-gap: 1.5em; */
     padding-left: 0;
 }
 .galleryBox li{
-    width: 100%;
+    width: calc(100%/ 3);
     overflow: hidden;
-    padding-top: 10px;
+    padding:10px 1vw 0;
+    box-sizing: border-box;
 }
 .galleryBox li img{
     width: 100%;
@@ -640,8 +644,8 @@ z-index: 1;
         width:90%;
     }
     .galleryBox{
-        column-count: 2;
-        column-gap: 1em;
+        /* column-count: 2;
+        column-gap: 1em; */
     }
 
 }
