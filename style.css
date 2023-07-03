@@ -213,6 +213,8 @@ form .uk-button:hover{
     display: none;
 }
 
+
+
 .swiper-grid-column>.swiper-wrapper{
     flex-direction: row;
     gap: 10px;
@@ -235,6 +237,7 @@ form .uk-button:hover{
 .grid{
     transition: all ease 1s;
 }
+
 .galleryBox{
     display: block;
     /* column-count: 3;
@@ -258,6 +261,26 @@ form .uk-button:hover{
 .galleryBox li:hover img{
     box-shadow:none;
     transform: translateY(0) scale(97%);
+}
+
+.grid-container{
+    position: relative;
+    display: grid;
+    max-width: 100rem;
+    margin: 0 auto;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    grid-auto-rows: 0.5rem;
+    padding: 0 2vw;
+}
+.grid-container li.grid-item{
+    width: 100%;
+    padding:0;
+}
+.grid-container .grid-item-box{
+    display: block;
+    overflow: hidden;
+    padding: 1rem 0;
 }
 
 .pro-title{
