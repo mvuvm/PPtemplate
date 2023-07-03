@@ -303,15 +303,41 @@
         document.querySelector('.section.main_visual > div').innerHTML = bannerList.join('');
 
     //슬라이드 부분 데이터 박아넣기
-        let slideList = [];
-        portfolio.slice(0,8).forEach((content,idx) => {
-            slideList.push(`
-            <div class="swiper-slide product_img round">
-                <img src="${content.img}" alt="${content.alt}">
-            </div>
-            `)
+    let slideList = [];
+    portfolio.slice(0,8).forEach((content,idx) => {
+        slideList.push(`
+        <div class="swiper-slide product_img round">
+            <img src="${content.img}" alt="${content.alt}">
+        </div>
+        `)
+    document.querySelector('.slideBox').innerHTML = slideList.join('');
+    });
+    /* let dataList = portfolio.length - 1;
+    let dataSlice = [];
+    function rand(min, max) {
+        for(i=0; i<9; i++){
+            let n = Math.floor(Math.random() * (max - min + 1)) + min;
+            if (! sameNum(n)) {
+            dataSlice.push(n);
+            } else {
+            i--;
+            }
+        }
+        function sameNum (n) {
+            return dataSlice.find((e) => (e === n));
+        }
+        return dataSlice;
+    }
+    rand(0, dataList);
+    console.log(dataSlice);
+    for(i = 0; i<9; i++){
+        slideList.push(`
+        <div class="swiper-slide product_img round">
+            <img src="${portfolio[dataSlice[i]].img}" alt="${portfolio[dataSlice[i]].alt}">
+        </div>
+        `)
         document.querySelector('.slideBox').innerHTML = slideList.join('');
-        });
+    }  배열내의 이미지 랜덤으로 뿌려주는 코드*/
 
     //카테고리 편집
         let categoryList = [`<li class="uk-active round" uk-filter-control><a href="#">All</a></li>`];
@@ -353,7 +379,6 @@
             const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'))
             const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'))
             const rowSpan =  Math.floor((item.querySelector('.grid-item-box').offsetHeight+rowGap)/(rowHeight+rowGap))
-            console.log(item.querySelector('.grid-item-box').offsetHeight);
             item.style.gridRowEnd = "span "+ rowSpan;
     })
 };
