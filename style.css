@@ -194,6 +194,18 @@ form .uk-button:hover{
 .section.main_visual{
     margin-top:50px;
 }
+.section.latest_art > div{
+    position: relative;
+    overflow: hidden;
+}
+.section.latest_art > div .swiper-pagination-fraction{
+    position: absolute;
+    top:20px;
+    left: 0;
+    width: 99%;
+    height: fit-content;
+    text-align: right;
+}
 
 .email_txt{
     margin-bottom: 10px;
