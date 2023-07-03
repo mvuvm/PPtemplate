@@ -304,7 +304,7 @@
 
     //슬라이드 부분 데이터 박아넣기
         let slideList = [];
-        portfolio.slice(0,6).forEach((content,idx) => {
+        portfolio.slice(0,8).forEach((content,idx) => {
             slideList.push(`
             <div class="swiper-slide product_img round">
                 <img src="${content.img}" alt="${content.alt}">
@@ -472,7 +472,7 @@
             document.querySelector('.thankyou_message').style.display = 'none';
         });
     </script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
     <script>
         var elem = document.querySelector('.grid');
             var msnry = new Masonry( elem, {
