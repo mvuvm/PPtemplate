@@ -107,8 +107,8 @@
                     <h3 class="section_title">Gallery</h3>
                     <ul class="categoryBox uk-subnav uk-subnav-pill">
                     </ul>
-                    <div  uk-lightbox="animation: slide" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
-                        <ul class="grid galleryBox js-filter"> <!-- 재정렬 문제로 애니메이션 효과 제거 uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200" -->
+                    <div uk-lightbox="animation: slide" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
+                        <ul class="grid galleryBox js-filter grid-container"> <!-- 재정렬 문제로 애니메이션 효과 제거 uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200" -->
                             <!-- <li data-tag="white">
                                 <a href="./images/slide1.jpg">
                                     <img class="round" src="./images/slide1.jpg" alt="슬라이드1">
@@ -327,22 +327,46 @@
         portfolio.forEach((content,idx) => {
             portfolioList.push(`
             <li class="grid-item" data-tag="${content.tag}">
-                <a href="${content.img}">
-                    <img class="round" src="${content.img}" alt="${content.alt}">
-                </a>
-                <div>
-                    <dl class="tal pdt15 uk-description-list uk-description-list-divider">
-                        <dt><strong class="pro-title">${content.title}</strong></dt>
-                        <dd class="em_block">
-                            <span class="uk-label">${content.tagname}</span>
-                            <span class="fr edit_date">${content.date}</span>
-                        </dd>
-                    </dl>
+                <div class="grid-item-box">
+                    <a href="${content.img}">
+                        <img class="round" src="${content.img}" alt="${content.alt}">
+                    </a>
+                    <div>
+                        <dl class="tal pdt15 uk-description-list uk-description-list-divider">
+                            <dt><strong class="pro-title">${content.title}</strong></dt>
+                            <dd class="em_block">
+                                <span class="uk-label">${content.tagname}</span>
+                                <span class="fr edit_date">${content.date}</span>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </li>
             `)
         document.querySelector('.galleryBox').innerHTML = portfolioList.join('');
         });
+    //갤러리 masonry 레이아웃 잡기
+    function resizeGridItems(){
+    const items = document.querySelectorAll('.grid-item')
+    items.forEach((item,idx) => {
+            const grid = document.querySelector('.grid-container')
+            const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'))
+            const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'))
+            const rowSpan =  Math.floor((item.querySelector('.grid-item-box').offsetHeight+rowGap)/(rowHeight+rowGap))
+            console.log(item.querySelector('.grid-item-box').offsetHeight);
+            item.style.gridRowEnd = "span "+ rowSpan;
+    })
+};
+
+window.addEventListener('load',resizeGridItems);
+window.addEventListener('resize',resizeGridItems);
+document.querySelector('.categoryBox').addEventListener('click',function(event){
+                setTimeout(()=>{
+                    console.log('타임아웃 작동');
+                    resizeGridItems();
+                },500);
+                return false;
+            });
 
     //스케쥴 부분 데이터 박아넣기
         document.querySelector('.scheduleYear').innerHTML = schedule.year;
@@ -472,27 +496,7 @@
             document.querySelector('.thankyou_message').style.display = 'none';
         });
     </script>
-    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
-    <script>
-        var elem = document.querySelector('.grid');
-            var msnry = new Masonry( elem, {
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 1
-            });
 
-        const categoryBtn = document.querySelector('.categoryBox');
-            categoryBtn.addEventListener('click',function(event){
-                elem.style.opacity = '0';
-                setTimeout(()=>{
-                    console.log('타임아웃 작동');
-                    msnry.layout();
-                    elem.style.opacity = '1';
-                },500);
-                return false;
-            })
-
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         /* var swiper = new Swiper(".mySwiper", {
