@@ -235,7 +235,7 @@ form .uk-button:hover{
 .product_img{
     position: relative;
     width: 100%;
-    height: 50vw;
+    height: 30vw;
     overflow: hidden;
     margin: 0 !important;
 }
@@ -685,9 +685,8 @@ z-index: 1;
     .main{
         width:90%;
     }
-    .galleryBox{
-        /* column-count: 2;
-        column-gap: 1em; */
+    .product_img{
+        height: 50vw;
     }
 
 }
