@@ -205,6 +205,7 @@ form .uk-button:hover{
     width: 99%;
     height: fit-content;
     text-align: right;
+    opacity: 0.7;
 }
 
 .email_txt{
@@ -681,6 +682,14 @@ z-index: 1;
     }
     #themes_btn .checkbox:checked + .knobs span {
         left: 3px;
+    }
+    #themes_btn .knobs:before{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #themes_btn .checkbox:checked + .knobs:after{
+        right: 50%;
+        transform: translateX(50%);
     }
     .main{
         width:90%;
