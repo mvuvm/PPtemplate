@@ -613,15 +613,16 @@ z-index: 1;
     .header ul.uk-nav{
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
     }
     .pageProgressBar{display: none;}
     .button-cover {
         position: absolute;
-        top:55px; right: 15px;
+        top:15px; right: 20px;
         width: 30px;
         height: 30px;
         margin: 0;
+        transform: scale(1);
     }
     .button{
         width: 30px;
