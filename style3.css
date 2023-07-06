@@ -148,11 +148,37 @@ html,body{
     padding: 20px 0;
 }
 
+.main_visual {
+    position: relative;
+}
 .main_visual .uk-background-cover{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.main_visual::before,
+.main_visual::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12%;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background: var(--c-bg-body);
+    z-index: 50;
+    box-shadow: 0 0 5px var(--c-bg-body);
+}
+.main_visual::before{
+    left: calc(50% - 8px);
+    transform: translateX(-50%) rotate(40deg);
+    transform-origin: bottom left;
+}
+.main_visual::after{
+    left: calc(50% + 8px);
+    transform: translateX(-50%) rotate(-40deg);
+    transform-origin: bottom right;
 }
 
 .banner{
@@ -631,7 +657,7 @@ z-index: 1;
 }
 @media all and (max-width: 959px){
     .banner{
-        padding:50px 40px;
+        padding:60px 40px 80px;
     }
     .banner_title,
     .section.main_visual p
@@ -646,6 +672,17 @@ z-index: 1;
 @media all and (max-width: 780px){
     html,body{
         font-size: 13px;
+    }
+
+    .main_visual::before,
+    .main_visual::after{
+        width: 20px;
+    }
+    .main_visual::before{
+        left: calc(50% - 5px);
+    }
+    .main_visual::after{
+        left: calc(50% + 5px);
     }
 
     .wrap .uk-navbar-nav{
