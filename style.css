@@ -227,7 +227,6 @@ form .uk-button:hover{
 }
 
 
-
 .swiper-grid-column>.swiper-wrapper{
     flex-direction: row;
     gap: 10px;
@@ -236,14 +235,14 @@ form .uk-button:hover{
 .product_img{
     position: relative;
     width: 100%;
-    height: 30vw;
+    height: 40vw;
     overflow: hidden;
     margin: 0 !important;
 }
 
 .product_img > img{
     width: 100%;
-    height:50vw;
+    height:40vw;
     object-fit: cover;
     object-position: top center;
 }
@@ -693,9 +692,6 @@ z-index: 1;
     }
     .main{
         width:90%;
-    }
-    .product_img{
-        height: 50vw;
     }
 
 }
