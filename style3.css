@@ -300,7 +300,6 @@ form .uk-button:hover{
     width: 100%; height: 100%;
     opacity: 0;
     transition: all ease 0.2s;
-    text-align: center;
     backdrop-filter: blur(5px) var(--c-filter)
 }
 .grid-container .grid-item-box:hover > a{
@@ -308,11 +307,12 @@ form .uk-button:hover{
     text-decoration: none;
 }
 .grid-container .grid-item-box > a dl{
-    max-width: 80%;
+    width: 100%;
+    padding:0 20px;
+    margin-bottom: 0;
 }
 .grid-container .grid-item-box > a dd,
 .grid-container .grid-item-box > a dt{
-    text-align: center;
     word-break: keep-all;
     color: var(--c-bg-body);
 }
