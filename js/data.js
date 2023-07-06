@@ -27,6 +27,22 @@ const category = [
 ]
 const portfolio = [
         {
+            title: '코드네임 아나스타샤 제냐',
+            tag: 'fanart',
+            tagname: '팬아트',
+            date: '23.07.05',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MDZfMTQy/MDAxNjg4NjAzMzIzMTE3.v3vsoK_lWp9uOaqkueYUD4Yl-cJ2kRCadw6kA5OTD0Eg.XyVI4dNm8cZ5SYvCodjHiIOeqNYnlUgr7cKeiHFxFWMg.JPEG.mvuvm/20230706%EF%BC%BF092824.jpg?type=w800',
+            alt: '작업물'
+        },
+        {
+            title: '플레이브 노아',
+            tag: 'fanart',
+            tagname: '팬아트',
+            date: '23.07.02',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MDNfNTAg/MDAxNjg4Mzg5MDMxMDM4.MhdnndmzauFUsmXHXPQ8MCEeO4SL2Pq5CYk4RAdK240g.wM2MEwrT9L_mL616AZ9JdylW-wkz2OEMHKVpYyFes6cg.PNG.mvuvm/%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B8%8C-%EB%85%B8%EC%95%843-2.png?type=w800',
+            alt: '작업물'
+        },
+        {
             title: '로맨스 판타지',
             tag: 'romencefantasy',
             tagname: '로맨스 판타지',
