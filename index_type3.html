@@ -308,7 +308,7 @@
     let dataList = portfolio.length - 1;
     let dataSlice = [];
     function rand(min, max) {
-        for(i=0; i<8; i++){
+        for(i=0; i<10; i++){
             let n = Math.floor(Math.random() * (max - min + 1)) + min;
             if (! sameNum(n)) {
             dataSlice.push(n);
@@ -323,7 +323,7 @@
     }
     rand(0, dataList);
     console.log(dataSlice);
-    for(i = 0; i<8; i++){
+    for(i = 0; i<10; i++){
         slideList.push(`
         <div class="swiper-slide product_img round">
             <img src="${portfolio[dataSlice[i]].img}" alt="${portfolio[dataSlice[i]].alt}">
@@ -500,8 +500,7 @@ window.addEventListener('resize',resizeGridItems);
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 15,
+        slidesPerView: 5,
         autoplay: {
         delay: 0, //add
         disableOnInteraction: false,
@@ -509,23 +508,18 @@ window.addEventListener('resize',resizeGridItems);
         speed: 5000,
         loop: true,
         loopAdditionalSlides: 1,
-        slidesPerView: 4,
         breakpoints: {
             "@0.00": {
-            slidesPerView: 3,
-            spaceBetween: 10,
+            slidesPerView: 4,
             },
             "@0.75": {
-            slidesPerView: 3,
-            spaceBetween: 10,
+            slidesPerView: 4,
             },
             "@1.00": {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 5,
             },
             "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 10,
+            slidesPerView: 5,
             },
         }
         });  //옆으로 오토슬라이딩 되는 슬라이드
