@@ -102,10 +102,14 @@
                 <div class="swiper-pagination"></div>
             </div>
             </section>
+
             <section class="section" id="gallery">
                 <div uk-lightbox="animation: slide" uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200">
                     <ul class="grid galleryBox js-filter grid-container"> <!-- 재정렬 문제로 애니메이션 효과 제거 uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200" -->
                     </ul>
+                </div>
+                <div class="more_box">
+                    <button class="more uk-button">더보기 <span class="current"></span> / <span class="total"></span></button>
                 </div>
             </section>
             <section class="section" id="schedule">
@@ -234,7 +238,7 @@
         let bannerList = [];
             bannerList.push(`
             <div class="uk-section uk-light uk-background-cover" style="background-image:url(${banner.bannerImg}); padding:0;">
-                <div class="uk-container banner">
+                <div class="banner">
                     <h2 class="banner_title">${banner.bannerTitle}</h2>
                     <div>
                         <p>${banner.bannerDesc}</p>
@@ -272,7 +276,7 @@
         return dataSlice;
     }
     rand(0, dataList);
-    console.log(dataSlice);
+
     for(i = 0; i<10; i++){
         slideList.push(`
         <div class="swiper-slide product_img round">
@@ -284,25 +288,73 @@
 
 
     //갤러리 부분 데이터 박아넣기
+        let gallerySlice
+        let currentCounter
+        let totalCounter = portfolio.length
         let portfolioList = [];
-        portfolio.forEach((content,idx) => {
-            portfolioList.push(`
-            <li class="grid-item" data-tag="${content.tag}">
-                <div class="grid-item-box">
-                    <img src="${content.img}" alt="${content.alt}">
-                    <a href="${content.img}">
-                        <dl class="tal uk-description-list uk-description-list-divider">
-                            <dd class="em_block">
-                                <span class="uk-label">${content.tagname}</span><span class="fr edit_date">${content.date}</span>
-                            </dd>
-                            <dt><strong class="pro-title">${content.title}</strong></dt>
-                        </dl>
-                    </a>
-                </div>
-            </li>
-            `)
-        document.querySelector('.galleryBox').innerHTML = portfolioList.join('');
-        });
+        if(totalCounter > 11){
+            currentCounter = 11;
+            gallerySlice = portfolio.slice(0,currentCounter);
+            galleryPush();
+            document.querySelector('.more').addEventListener('click',function(){
+                for(i=currentCounter; i<currentCounter + 4; i++){
+                    if(i == totalCounter){
+                        break;
+                    }
+                    //console.log(i);
+                    portfolioList.push(`
+                        <li class="grid-item" data-tag="${portfolio[i].tag}">
+                            <div class="grid-item-box">
+                                <img src="${portfolio[i].img}" alt="${portfolio[i].alt}">
+                                <a href="${portfolio[i].img}">
+                                    <dl class="tal uk-description-list uk-description-list-divider">
+                                        <dd class="em_block">
+                                            <span class="uk-label">${portfolio[i].tagname}</span><span class="fr edit_date">${portfolio[i].date}</span>
+                                        </dd>
+                                        <dt><strong class="pro-title">${portfolio[i].title}</strong></dt>
+                                    </dl>
+                                </a>
+                            </div>
+                        </li>
+                        `)
+                        document.querySelector('.galleryBox').innerHTML += portfolioList[i];
+                }
+                setTimeout(function(){resizeGridItems(); /* console.log('재정렬 완료') */},100);
+                currentCounter = currentCounter + 4
+
+                if(portfolioList.length == totalCounter){
+                    document.querySelector('.more_box').style.display = 'none';
+                    currentCounter = portfolioList.length
+                }
+                document.querySelector('.more > .current').textContent = currentCounter;
+                return currentCounter;
+            });
+        }else{
+            gallerySlice = portfolio
+            galleryPush();
+        }
+        function galleryPush(){
+            gallerySlice.forEach((content,idx) => {
+                portfolioList.push(`
+                <li class="grid-item" data-tag="${content.tag}">
+                    <div class="grid-item-box">
+                        <img src="${content.img}" alt="${content.alt}">
+                        <a href="${content.img}">
+                            <dl class="tal uk-description-list uk-description-list-divider">
+                                <dd class="em_block">
+                                    <span class="uk-label">${content.tagname}</span><span class="fr edit_date">${content.date}</span>
+                                </dd>
+                                <dt><strong class="pro-title">${content.title}</strong></dt>
+                            </dl>
+                        </a>
+                    </div>
+                </li>
+                `)
+                document.querySelector('.galleryBox').innerHTML = portfolioList.join('');
+            });
+            document.querySelector('.more > .current').textContent = currentCounter;
+            document.querySelector('.more > .total').textContent = totalCounter;
+        };
     //갤러리 masonry 레이아웃 잡기
     function resizeGridItems(){
     const items = document.querySelectorAll('.grid-item')
