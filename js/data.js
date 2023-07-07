@@ -1,7 +1,7 @@
 const banner = {
     logoName: 'SILVONG',
     bannerImg: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfMTk5/MDAxNjg3MDcwODgyNjIw.3f7ldpNfW99GKVmlgjhoNtPc9iVkwLLAiltTIvdYF-Qg.r7O8C-zPzKJ4wh3TjBNQb8nD67HmswzgAENP_11femog.PNG.mvuvm/%ED%98%84%EC%9E%90%EC%9D%98-%EA%BD%83-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png?type=w800',
-    bannerTitle: '포트폴리오 사이트 OPEN',
+    bannerTitle: 'Hello! Welcome to<br>my portfolio',
     bannerDesc: '포트폴리오 사이트를 새롭게 정비하였습니다.<br>2023년 일정은 아래 스케쥴란을 확인해주세요.',
     bannerLinkTxt: '2023일정보기',
     bannerLink: '#schedule' //페이지 내의 링크: #gallery, #schedule, #contact
@@ -225,16 +225,16 @@ const profile = {
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
     carrer: [
         {
-            title: '<a href="https://twitter.com/dayong_ac" target="_blank">https://twitter.com/dayong_ac</a>',
-            date: '트위터',
+            title: '경력사항1',
+            date: '22.01.01',
         },
         {
-            title: '<a href="#" target="_blank">블로그</a>',
-            date: '블로그',
+            title: '경력사항2',
+            date: '23.01.01',
         },
         {
-            title: '<a href="https://artmug.kr/index.php?channel=view&uid=28477" target="_blank">https://artmug.kr/</a>',
-            date: '커미션',
+            title: '경력사항3',
+            date: '23.05.05',
         }
     ]
 }
