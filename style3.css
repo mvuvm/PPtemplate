@@ -223,7 +223,6 @@ form .uk-button:hover{
 .main{
     position: relative;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -349,7 +348,9 @@ form .uk-button:hover{
 
 #schedule,
 #contact{
-    padding: 0 20px;
+    padding:5vh 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .scheduleYear{
