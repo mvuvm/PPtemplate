@@ -204,7 +204,8 @@ html,body{
     color: var(--c-bg-body)!important;
 }
 .banner_title + div a,
-form .uk-button{
+form .uk-button,
+.more{
     margin-top: 30px;
     background:var(--c-bg-body);
     color:var(--c-text-primary);
@@ -214,10 +215,23 @@ form .uk-button{
     box-shadow: 0 3px 7px var(--c-shadow-color);
 }
 .banner_title + div a:hover,
-form .uk-button:hover{
+form .uk-button:hover,
+.more{
     color:var(--c-text-primary);
     transform: translateY(3px);
     box-shadow:none;
+}
+.more{
+    display: block;
+    margin:0 auto;
+}
+.more_box{
+    display: block;
+    position: relative;
+    margin-top: -80px;
+    background: linear-gradient(to top, var(--c-bg-body),var(--c-bg-body),transparent);
+    padding: 80px 0 0;
+    z-index: 80;
 }
 
 .main{
@@ -348,7 +362,7 @@ form .uk-button:hover{
 
 #schedule,
 #contact{
-    padding:5vh 20px 0;
+    padding:10vh 20px 0;
     max-width: 1200px;
     margin: 0 auto;
 }
