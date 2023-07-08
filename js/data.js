@@ -27,14 +27,6 @@ const category = [
 ]
 const portfolio = [
         {
-            title: '코드네임 아나스타샤 제냐',
-            tag: 'fanart',
-            tagname: '팬아트',
-            date: '23.07.05',
-            img: 'https://postfiles.pstatic.net/MjAyMzA3MDhfNTYg/MDAxNjg4ODA1NTg5NjQ4.MWFXraW_wTCFeY7CstUgV2n55uTtPSgutVyWK0k7mcsg.pyHMpZ7uXbHjnE_wQtRBDQme8o6gAVTMBQjGLn1zLYQg.PNG.mvuvm/%EC%A0%9C%EB%83%903.png?type=w773?type=w800',
-            alt: '작업물'
-        },
-        {
             title: '플레이브 노아',
             tag: 'fanart',
             tagname: '팬아트',
