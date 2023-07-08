@@ -31,7 +31,7 @@ const portfolio = [
             tag: 'fanart',
             tagname: '팬아트',
             date: '23.07.05',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MDZfMTQy/MDAxNjg4NjAzMzIzMTE3.v3vsoK_lWp9uOaqkueYUD4Yl-cJ2kRCadw6kA5OTD0Eg.XyVI4dNm8cZ5SYvCodjHiIOeqNYnlUgr7cKeiHFxFWMg.JPEG.mvuvm/20230706%EF%BC%BF092824.jpg?type=w800',
+            img: 'https://postfiles.pstatic.net/MjAyMzA3MDhfNTYg/MDAxNjg4ODA1NTg5NjQ4.MWFXraW_wTCFeY7CstUgV2n55uTtPSgutVyWK0k7mcsg.pyHMpZ7uXbHjnE_wQtRBDQme8o6gAVTMBQjGLn1zLYQg.PNG.mvuvm/%EC%A0%9C%EB%83%903.png?type=w773?type=w800',
             alt: '작업물'
         },
         {
