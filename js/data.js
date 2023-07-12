@@ -27,6 +27,14 @@ const category = [
 ]
 const portfolio = [
         {
+            title: '방송용 일러스트',
+            tag: 'commision',
+            tagname: '커미션',
+            date: '23.07.11',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMjU5/MDAxNjg5MTIyNDg0Mzgx.dlX_Cm9JCSJnkzeUvBg4vnOmapesqiMp8kD2rZAdsyUg.UbFXshPhiQdrfcB9P4xF9Y4kjdQyoRcKGLdCHH-8gwsg.JPEG.mvuvm/20230712%EF%BC%BF094034.jpg?type=w800',
+            alt: '작업물'
+        },
+        {
             title: '플레이브 노아',
             tag: 'fanart',
             tagname: '팬아트',
@@ -212,6 +220,7 @@ const schedule = {
 const profile = {
     name: '작가명', //작가명
     subdesc: '프리랜서 일러스트레이터', //상태 텍스트
+    info:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
@@ -228,5 +237,19 @@ const profile = {
             title: '경력사항3',
             date: '23.05.05',
         }
+    ],
+    link: [
+        {
+            title:'트위터',
+            url:'twitter.com',
+        },
+        {
+            title:'인스타',
+            url:'twitter.com',
+        },
+        {
+            title:'커미션1',
+            url:'twitter.com',
+        },
     ]
 }
