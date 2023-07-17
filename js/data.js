@@ -219,8 +219,10 @@ const schedule = {
 
 const profile = {
     name: '작가명', //작가명
+    hompageTit: 'portfolio homepage',
     subdesc: '프리랜서 일러스트레이터', //상태 텍스트
     info:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    mainImg:'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTVfMTQ3/MDAxNjg5NDMzMDEzNTY2.Bm37KbjYpZI847zviKi1eJFNnkq1A9QCY7vYFo61Bvkg.5mAUQXt34mBDDLJ3tZ7YA2jqzKPCR-a5AkRS886yj6Mg.PNG.mvuvm/%EC%B9%B4%EC%97%98%EB%8B%98-%EB%B0%A9%EC%86%A1%EC%9A%A9-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%95%BD%EA%B0%84_%EC%BF%A8%ED%86%A4.png?type=w800',//메인 이미지
     image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
