@@ -747,6 +747,22 @@ z-index: 1;
     }
 
 }
+@media all and (max-height: 510px){
+    .wrap{
+        overflow-x: hidden;
+    }
+    .profile_box{
+        position: relative;
+        top: 0; left: 0;
+        transform: none;
+        padding-top: 30px;
+    }
+    #schedule > div{
+        position:relative;
+        top:0; left: 0;
+        transform: none;
+    }
+}
 @media all and (min-width: 720px){
     .wrap .uk-navbar-center:only-child, .uk-navbar-left, .uk-navbar-right{
         gap: 15px;
