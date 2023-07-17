@@ -31,7 +31,7 @@ const portfolio = [
             tag: 'commision',
             tagname: '커미션',
             date: '23.07.11',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMjU5/MDAxNjg5MTIyNDg0Mzgx.dlX_Cm9JCSJnkzeUvBg4vnOmapesqiMp8kD2rZAdsyUg.UbFXshPhiQdrfcB9P4xF9Y4kjdQyoRcKGLdCHH-8gwsg.JPEG.mvuvm/20230712%EF%BC%BF094034.jpg?type=w800',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTVfMTQ3/MDAxNjg5NDMzMDEzNTY2.Bm37KbjYpZI847zviKi1eJFNnkq1A9QCY7vYFo61Bvkg.5mAUQXt34mBDDLJ3tZ7YA2jqzKPCR-a5AkRS886yj6Mg.PNG.mvuvm/%EC%B9%B4%EC%97%98%EB%8B%98-%EB%B0%A9%EC%86%A1%EC%9A%A9-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%95%BD%EA%B0%84_%EC%BF%A8%ED%86%A4.png?type=w800',
             alt: '작업물'
         },
         {
