@@ -350,7 +350,7 @@ window.addEventListener('resize',resizeGridItems);
         let profileCarrerBoxList = [];
         profile.carrer.forEach((profile,idx) => {
             profileCarrerBoxList.push(`
-            <p><span class="uk-text-meta">${profile.date}</span> - ${profile.title}</p>
+            <p><span class="uk-text-meta">${profile.date}</span>${profile.title}</p>
             `)
             profileCarrerBox.innerHTML = profileCarrerBoxList.join('');
         });
