@@ -457,7 +457,7 @@ p.gradient_txt{
 }
 .carrer p{
     margin: 0;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 .carrer p + p{
     border-left: 1px solid var(--c-border-primary);
