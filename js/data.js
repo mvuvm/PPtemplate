@@ -27,6 +27,14 @@ const category = [
 ]
 const portfolio = [
         {
+            title: '무제',
+            tag: 'romencefantasy',
+            tagname: '로맨스 판타지',
+            date: '23.07.19',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTlfNzMg/MDAxNjg5NzI3OTEzNDcy.acU-nuUQcAsSP3tEsATA3GImuSfT8oVML1rRsww8W8Qg.y7o_9nJq39dDqbqmccnpbDwMK4FxfPvVqhVgZUu8HSQg.JPEG.mvuvm/20230719%EF%BC%BF095129.jpg?type=w800',
+            alt: '작업물'
+        },
+        {
             title: '방송용 일러스트',
             tag: 'commision',
             tagname: '커미션',
@@ -43,7 +51,7 @@ const portfolio = [
             alt: '작업물'
         },
         {
-            title: '로맨스 판타지',
+            title: '무제',
             tag: 'romencefantasy',
             tagname: '로맨스 판타지',
             date: '23.06.18',
