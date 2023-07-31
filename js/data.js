@@ -31,7 +31,7 @@ const portfolio = [
             tag: 'romencefantasy',
             tagname: '로맨스 판타지',
             date: '23.07.19',
-            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTlfNzMg/MDAxNjg5NzI3OTEzNDcy.acU-nuUQcAsSP3tEsATA3GImuSfT8oVML1rRsww8W8Qg.y7o_9nJq39dDqbqmccnpbDwMK4FxfPvVqhVgZUu8HSQg.JPEG.mvuvm/20230719%EF%BC%BF095129.jpg?type=w800',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MjNfMTcg/MDAxNjkwMDQxMDMzMDEw.ay5VVtc3CaEpRqi8tGuTWyNe-fnMc7OLZD3zH08TREwg.vO8jE77zgN-naUpkpGjEJsyN0h7XywoJTl3QmCI-10wg.PNG.mvuvm/%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8-%EB%A1%9C%ED%8C%90-%EC%97%AC%EC%BA%90.png?type=w800',
             alt: '작업물'
         },
         {
