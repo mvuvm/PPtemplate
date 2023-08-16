@@ -27,6 +27,43 @@ const category = [
 ]
 const portfolio = [
         {
+            current:'최신',
+            title: '녹안 대공님',
+            tag: 'personal',
+            tagname: '개인작',
+            date: '23.08.15',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA4MTRfMjg0/MDAxNjkyMDE4NzE0OTE3.2COVv9gBnB0U767fNmYwsKU_Dt6mgmbbZE-t8qlp5GMg.vFk3tNCxuAVbWh4gDDoQBq_020V_4JpVULBosuVh-Swg.PNG.mvuvm/%EB%85%B9%EC%95%88-%EB%8C%80%EA%B3%B5%EB%8B%983-1.png?type=w800',
+            alt: '작업물'
+        },
+        {
+            current:'최신',
+            title: '저승사자',
+            tag: 'personal',
+            tagname: '개인작',
+            date: '23.08.14',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA4MTRfODkg/MDAxNjkxOTQwNjkxMDkz.-Dn3-YM5WhMRs3oEOF3be--cuhLwDs9eWqFXoObJcu4g.4RSahdbfg33mFaw5UOR-L6Brc7TCYqUglEnuoUHS0Ekg.PNG.mvuvm/%EC%A0%80%EC%8A%B9%EC%82%AC%EC%9E%90-%ED%95%A9%EC%9E%91.png?type=w800',
+            alt: '작업물'
+        },
+        {
+            current:'최신',
+            title: '플레이브 노아',
+            tag: 'fanart',
+            tagname: '팬아트',
+            date: '23.08.10',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA4MTBfMTgg/MDAxNjkxNjc5MzY5Njg5.oemzSy5-_E45oD274QDRpBlL6eJiL6rReSsBsQE0Bs4g.D0pIKkLmUEGJL4LJXB3zhwrEPMcNvt_VC7bHjcFbpCIg.PNG.mvuvm/%EB%B2%A0%ED%85%94%EA%B8%B0%EC%9A%B0%EC%8A%A4-%EB%85%B8%EC%95%84-%ED%9B%84%EB%B3%B4%EC%A0%95.png?type=w800',
+            alt: '작업물'
+        },
+        {
+            current:'최신',
+            title: '드림 커미션',
+            tag: 'commision',
+            tagname: '커미션',
+            date: '23.08.10',
+            img: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA4MTBfMjUy/MDAxNjkxNjc5MjU3MzMw.7eNjkTyNzFs_dJv09fjegcWWNEjziDlqQjKu8F1iAeYg.sJyWJCLkHzXYeJWHFCE9v7W_hGfBmxDhi43aLW2-7EAg.PNG.mvuvm/%EB%9F%BD%ED%94%84%EB%93%80-%EB%93%9C%EB%A6%BC-%EC%BB%A4%EB%AF%B8%EC%85%98-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A1%B0%EC%A0%952.png?type=w400',
+            alt: '작업물'
+        },
+        {
+            current:'최신',
             title: '무제',
             tag: 'romencefantasy',
             tagname: '로맨스 판타지',
@@ -231,7 +268,7 @@ const profile = {
     subdesc: '프리랜서 일러스트레이터', //상태 텍스트
     info:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     mainImg:'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTVfMTQ3/MDAxNjg5NDMzMDEzNTY2.Bm37KbjYpZI847zviKi1eJFNnkq1A9QCY7vYFo61Bvkg.5mAUQXt34mBDDLJ3tZ7YA2jqzKPCR-a5AkRS886yj6Mg.PNG.mvuvm/%EC%B9%B4%EC%97%98%EB%8B%98-%EB%B0%A9%EC%86%A1%EC%9A%A9-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%95%BD%EA%B0%84_%EC%BF%A8%ED%86%A4.png?type=w800',//메인 이미지
-    image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MDhfNCAg/MDAxNjg2MjIwMDQ0ODAy.dqPnVGDpCBGdLz_6bmBwiDcPyWo9bJt4JcCkT5-bRt4g.l_JwhAA2vUJGqqfRNnlPyxy3j9ifKeQt4TyF6B8jE3Mg.PNG.mvuvm/%ED%9D%91%EC%A0%81-%EB%82%A8%EC%BA%90.png?type=w800', // 프로필 이미지
+    image: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA4MTRfMjg0/MDAxNjkyMDE4NzE0OTE3.2COVv9gBnB0U767fNmYwsKU_Dt6mgmbbZE-t8qlp5GMg.vFk3tNCxuAVbWh4gDDoQBq_020V_4JpVULBosuVh-Swg.PNG.mvuvm/%EB%85%B9%EC%95%88-%EB%8C%80%EA%B3%B5%EB%8B%983-1.png?type=w800', // 프로필 이미지
     email: 'test@example.com',
     emaildesc: '장르, 희망 단가, 마감일을 포함하여 문의 주세요.<br>아래의 폼을 이용하실 경우 답장 받으실 이메일을 필수로 남겨주셔야 답변이 가능합니다.',
     carrer: [
