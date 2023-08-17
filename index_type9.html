@@ -97,10 +97,9 @@
         <main class="main">
             <section class="section profile_section currentView" id="profile">
                 <div class="profile_box">
-                    <div class="uk-card-header">
-                    </div>
+                    <div class="profile_img"></div>
                 </div>
-                <!-- <h2 class="gradient_txt"></h2> -->
+                <h2 class="gradient_txt"></h2>
             </section>
             <section class="section" id="gallery">
                 <div  uk-filter="target: .js-filter">
@@ -330,15 +329,31 @@
         let profileBodyBox = document.querySelector('.profile_box .uk-card-body');
         let profileHeaderBoxList= [];
         let profileBodyBoxList= [];
-        let n = Math.floor(Math.random() * (portfolio.length - 0 + 1)) + 0;
-        profileHeaderBoxList.push(`
-            <div class="profile_img">
-                 <img src="${portfolio[n].img}" alt="Avatar">
-                <!-- <img src="${profile.mainImg}" alt="Avatar"> 랜덤 이미지 출력-->
-            </div>
-            <h2 class="gradient_txt">${profile.hompageTit}</h2>
+        //let n = Math.floor(Math.random() * (portfolio.length - 0 + 1)) + 0;
+        let randomPick = [];
+        function numPick(min, max) {
+            for(i=0; i<5; i++){
+                let n = Math.floor(Math.random() * (max - min + 1)) + min;
+                if (! sameNum(n)) {
+                randomPick.push(n);
+                } else {
+                i--;
+                }
+            }
+            function sameNum (n) {
+                return randomPick.find((e) => (e === n));
+            }
+            return randomPick.sort(function(a, b){ return a - b; });
+        }
+        numPick(0,portfolioList.length - 1)
+        randomPick.forEach((content,idx) => {
+            profileHeaderBoxList.push(`
+                <div>
+                    <img src="${portfolio[content].img}" alt="Avatar">
+                </div>
             `)
-        profileHeaderBox.innerHTML = profileHeaderBoxList.join('');
+            profileHeaderBox.innerHTML = profileHeaderBoxList.join('');
+        });
         document.querySelector('.profile_box + h2').innerText = `${profile.hompageTit}`;
 
     //푸터 카피라이트
@@ -439,4 +454,3 @@
 <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
-
