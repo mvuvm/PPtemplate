@@ -78,7 +78,7 @@
             <li class="l-section section section--is-active">
               <div class="intro">
                 <div class="intro--banner">
-                    <h1>Your next<br>interactive<br>experience</h1>
+                    <h1></h1>
                     <button class="cta">Contact ME
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                         <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -231,6 +231,7 @@
     }
 
 // 로고 이름 변경
+document.querySelector('.intro--banner h1').innerHTML = `${banner.bannerTitle}`;
 document.querySelector('.logo_item').innerHTML = `${banner.logoName}`;
 
 //슬라이드 부분 데이터 박아넣기
@@ -363,7 +364,10 @@ let schedule_badge = document.querySelectorAll('.schedule_check');
         profileBodyBoxList.push(`
             <div class="profile_con">
                 <div class="flex-box">
-                    <p>${profile.name}<span class="uk-text-meta uk-margin-remove-top"> - ${profile.subdesc}</span></p>
+                    <p>${profile.name}<span class="uk-text-meta uk-margin-remove-top"> - ${profile.subdesc}</span>
+                      <br/>
+                      <span class="profile_info uk-text-meta">${profile.info}</span>
+                    </p>
                     <div class="link_box"></div>
                 </div>
             </div>
