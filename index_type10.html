@@ -18,6 +18,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="./style10.css">
 
+    <script type="text/javascript">
+      function isMobile() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+      var link = './index_type10_m.html';
+      if(isMobile()){
+          location.href=link;
+          location.replace(link);
+      }
+    </script>
 
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
