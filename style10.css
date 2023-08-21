@@ -2171,12 +2171,18 @@ z-index: 99;
 }
 
 @media (max-width: 768px) {
+    .section_title{
+        font-size: 55px;
+        margin-top: 50px;
+    }
+
     .intro--banner {
         height: auto;
         text-align: center;
     }
     .intro--banner h1 {
-        font-size: 44px
+        font-size: 44px;
+        max-width:100%;
     }
     .intro--options {
         display: block;
