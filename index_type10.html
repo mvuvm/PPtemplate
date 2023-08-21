@@ -527,6 +527,13 @@ $('.cta').click(function(){
 
 });
 
+$('.logo_item').click(function(){
+
+updateNavs(0);
+updateContent(0, 0, 0);
+
+});
+
 // swipe support for touch devices
 var targetElement = document.getElementById('viewport'),
     mc = new Hammer(targetElement);
