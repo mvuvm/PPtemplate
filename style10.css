@@ -135,10 +135,13 @@ a {
 
 a:active,
 a:hover {
-    outline: 0
+    outline: 0;
+    text-decoration: none;
+    color:inherit;
 }
 
 abbr[title] {
+
     border-bottom: 1px dotted
 }
 
@@ -479,7 +482,7 @@ body {
     }
 }
 
-@media(max-width: 359px) {
+@media(max-width: 375px) {
     .device-notification {
         display: -webkit-box;
         display: -webkit-flex;
@@ -850,19 +853,10 @@ body {
 }
 
 .intro--options {
-    height: 80px;
+    height: 35px;
     overflow: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    list-style: none
 }
 
 .intro--options>a {
@@ -905,7 +899,8 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0 auto
+    margin: 0 auto;
+    padding-top: 3vh;
 }
 
 @media (max-width: 1180px) {
@@ -2106,7 +2101,32 @@ z-index: 99;
     display: none;
 }
 
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+.profile_section{
+    height: 100%;
+}
+
+.link_box a{
+    display: inline-block;
+    padding: 5px 20px;
+    background: var(--c-point02-color);
+    border-radius: 20px;
+    color: var(--c-bg-body);
+    font-weight: bold;
+}
+.link_box a + a{
+    margin-left: 10px;
+}
+
+.fw400{
+    padding-top: 20px;
+}
 
 @media (max-width: 900px) {
     .intro--banner {
@@ -2128,15 +2148,17 @@ z-index: 99;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .intro--banner {
-        height: 305px
+        height: auto;
+        text-align: center;
     }
     .intro--banner h1 {
         font-size: 44px
     }
     .intro--options {
-        display: block
+        display: block;
+        height: auto;
     }
     .intro--options>a {
         display: block;
@@ -2146,12 +2168,24 @@ z-index: 99;
     .intro--options>a:last-child {
         margin-bottom: 0
     }
+    .swiper{
+        position: relative;
+        top: 0; left: 0; right: 0;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .profile_con .flex-box:nth-of-type(1){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .link_box{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
-    .intro--banner {
-        height: 360px
-    }
     .intro--banner h1 {
         font-size: 55px
     }
