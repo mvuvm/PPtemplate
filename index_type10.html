@@ -47,7 +47,7 @@
       <div id="viewport" class="l-viewport">
         <div class="l-wrapper">
           <header class="header">
-            <a class="logo_item" href="#" aria-label="Back to Home">Logo</a>
+            <a class="logo_item" href="javascript:void(0);" aria-label="Back to Home">Logo</a>
             <div class="header--nav-toggle">
               <span></span>
             </div>
@@ -100,7 +100,7 @@
                 <div class="intro--options">
                     <section class="profile_section">
                         <div class="profile_box">
-                            <div class="uk-card-body">
+                            <div class="profile-body">
                             </div>
                         </div>
                     </section>
@@ -339,10 +339,9 @@ let categoryList = [`<li class="uk-active round" uk-filter-control="[data-curren
 //스케쥴 뱃지 스타일 주기
 let schedule_badge = document.querySelectorAll('.schedule_check');
         let badge_arr = [];
-        schedule_badge.forEach((badge_txt) => {
-            badge_arr.push(badge_txt.innerText);
-        });
-        console.log(badge_arr);
+          schedule_badge.forEach((content) => {
+            badge_arr.push(content.textContent);
+          });
         badge_arr.forEach((currentElement, index, array) => {
             switch (currentElement) {
                 case '마감':
@@ -358,38 +357,20 @@ let schedule_badge = document.querySelectorAll('.schedule_check');
     //작가 프로필, form
         document.querySelector('.email_txt').innerHTML = profile.email;
         document.querySelector('.email_desc').innerHTML = profile.emaildesc;
-        let profileBodyBox = document.querySelector('.profile_box .uk-card-body');
+        let profileBodyBox = document.querySelector('.profile_box .profile-body');
         let profileBodyBoxList= [];
         let n = Math.floor(Math.random() * (portfolio.length - 0 + 1)) + 0;
         profileBodyBoxList.push(`
-            <div class="profile_con uk-width-expand">
-                <div>
-                    <stong class="uk-card-title uk-margin-remove-bottom em_block gradient_txt">Who AM I ?</stong>
-                    <p>${profile.name}</p>
-                    <span class="uk-text-meta uk-margin-remove-top">${profile.subdesc}</span>
-                </div>
-            </div>
-            <hr>
-            <div class="flex-box">
-                <div class="carrer"></div>
-                <div>${profile.info}
-                    <div class="link_box">
-                    </div>
+            <div class="profile_con">
+                <div class="flex-box">
+                    <p>${profile.name}<span class="uk-text-meta uk-margin-remove-top"> - ${profile.subdesc}</span></p>
+                    <div class="link_box"></div>
                 </div>
             </div>
             `)
         profileBodyBox.innerHTML = profileBodyBoxList.join('');
 
-        let profileCarrerBox = document.querySelector('.profile_box .uk-card-body .carrer');
-        let profileCarrerBoxList = [];
-        profile.carrer.forEach((profile,idx) => {
-            profileCarrerBoxList.push(`
-            <p><span class="uk-text-meta">${profile.date}</span> - ${profile.title}</p>
-            `)
-            profileCarrerBox.innerHTML = profileCarrerBoxList.join('');
-        });
-
-        let profileLinkBox = document.querySelector('.profile_box .uk-card-body .link_box');
+        let profileLinkBox = document.querySelector('.profile_box .profile-body .link_box');
         let profileLinkBoxList = [];
         profile.link.forEach((profile,idx) => {
             profileLinkBoxList.push(`
