@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="./style10_m.css">
 
-   <script type="text/javascript">
+    <script type="text/javascript">
       function isMobile() {
           return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       }
@@ -384,6 +384,8 @@ let schedule_badge = document.querySelectorAll('.schedule_check');
 				if (entry.isIntersecting) {
                     document.querySelector('.mail_loading').style.display = 'none'
                     document.querySelector('.mail_btn').style.display = 'block'
+                    document.querySelector('.uk-fieldset').style.height = 'auto'
+                    document.querySelector('.uk-fieldset').style.opacity = '1'
 				} else{
                     document.querySelector('.mail_btn').addEventListener('click',function(){
                         let mailCheck = 0;
@@ -405,6 +407,8 @@ let schedule_badge = document.querySelectorAll('.schedule_check');
                         if(mailCheck == 1){
                             document.querySelector('.mail_loading').style.display = 'block'
                             document.querySelector('.mail_btn').style.display = 'none'
+                            document.querySelector('.uk-fieldset').style.height = '370px'
+                            document.querySelector('.uk-fieldset').style.opacity = '0.5'
                         }
 
                     });
@@ -499,6 +503,13 @@ $('.cta').click(function(){
 
   updateNavs(lastItem);
   updateContent(curPos, nextPos, lastItem);
+
+});
+
+$('.logo_item').click(function(){
+
+updateNavs(0);
+updateContent(0, 0, 0);
 
 });
 
