@@ -1,6 +1,6 @@
 const banner = {
     logoName: 'SILVONG',
-    bannerImg: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA2MThfMTk5/MDAxNjg3MDcwODgyNjIw.3f7ldpNfW99GKVmlgjhoNtPc9iVkwLLAiltTIvdYF-Qg.r7O8C-zPzKJ4wh3TjBNQb8nD67HmswzgAENP_11femog.PNG.mvuvm/%ED%98%84%EC%9E%90%EC%9D%98-%EA%BD%83-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png?type=w800',
+    bannerImg: 'https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTVfMTQ3/MDAxNjg5NDMzMDEzNTY2.Bm37KbjYpZI847zviKi1eJFNnkq1A9QCY7vYFo61Bvkg.5mAUQXt34mBDDLJ3tZ7YA2jqzKPCR-a5AkRS886yj6Mg.PNG.mvuvm/%EC%B9%B4%EC%97%98%EB%8B%98-%EB%B0%A9%EC%86%A1%EC%9A%A9-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%95%BD%EA%B0%84_%EC%BF%A8%ED%86%A4.png?type=w800',
     bannerTitle: 'Hello! Welcome to<br>my portfolio',
     bannerDesc: '포트폴리오 사이트를 새롭게 정비하였습니다.<br>2023년 일정은 아래 스케쥴란을 확인해주세요.',
     bannerLinkTxt: '2023일정보기',
@@ -297,6 +297,6 @@ const profile = {
         {
             title:'커미션1',
             url:'twitter.com',
-        },
+        }
     ]
 }
